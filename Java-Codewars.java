@@ -9,3 +9,9 @@ class Kata {
     return Integer.toString(num);
   }
 }
+// best practice
+class Kata {
+  public static String numberToString(int num) {
+    return String.valueOf(num);
+  }
+}
