@@ -110,9 +110,16 @@ public class AbbreviateTwoWords {
 
   public static String abbrevName(String name) {
     String[] fullName = name.split(" ");
-    String firstName = fullName[0];
-    String lastName = fullName[1];
-    String initials = (firstName.substring(0, 1).toUpperCase()) + "." + (lastName.substring(0, 1).toUpperCase());
-    return initials;
+    return (fullName[0].substring(0, 1) + "." + fullName[1].substring(0, 1)).toUpperCase();
+  }
+}
+
+// best practice
+
+public class AbbreviateTwoWords {
+
+  public static String abbrevName(String name) {
+    String[] names = name.split(" ");
+    return (names[0].charAt(0) + "." + names[1].charAt(0)).toUpperCase()
   }
 }
