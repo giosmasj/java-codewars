@@ -112,7 +112,7 @@ public class AbbreviateTwoWords {
     String[] fullName = name.split(" ");
     String firstName = fullName[0];
     String lastName = fullName[1];
-    String initials = firstName.substring(0, 1) + "." + lastName.substring(0, 1);
+    String initials = (firstName.substring(0, 1).toUpperCase()) + "." + (lastName.substring(0, 1).toUpperCase());
     return initials;
   }
 }
