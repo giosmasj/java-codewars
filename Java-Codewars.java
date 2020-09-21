@@ -85,12 +85,34 @@
 // repeatStr(6, "I") // "IIIIII"
 // repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
 
-public class Solution {
-  public static String repeatStr(final int repeat, final String string) {
-    String repeatedString = "";
-    for (int i = 0; i < repeat; i++){
-      repeatedString += string;
-    }
-      return repeatedString;
+// public class Solution {
+//   public static String repeatStr(final int repeat, final String string) {
+//     String repeatedString = "";
+//     for (int i = 0; i < repeat; i++){
+//       repeatedString += string;
+//     }
+//       return repeatedString;
+//   }
+// }
+
+// Write a function to convert a name into initials. This kata strictly
+// takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// Patrick Feeney => P.F
+
+public class AbbreviateTwoWords {
+
+  public static String abbrevName(String name) {
+    String[] fullName = name.split(" ");
+    String firstName = fullName[0];
+    String lastName = fullName[1];
+    String initials = firstName.substring(0, 1) + "." + lastName.substring(0, 1);
+    return initials;
   }
 }
