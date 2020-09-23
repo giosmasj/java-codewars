@@ -106,20 +106,40 @@
 
 // Patrick Feeney => P.F
 
-public class AbbreviateTwoWords {
+// public class AbbreviateTwoWords {
 
-  public static String abbrevName(String name) {
-    String[] fullName = name.split(" ");
-    return (fullName[0].substring(0, 1) + "." + fullName[1].substring(0, 1)).toUpperCase();
-  }
-}
+//   public static String abbrevName(String name) {
+//     String[] fullName = name.split(" ");
+//     return (fullName[0].substring(0, 1) + "." + fullName[1].substring(0, 1)).toUpperCase();
+//   }
+// }
 
 // best practice
 
-public class AbbreviateTwoWords {
+// public class AbbreviateTwoWords {
 
-  public static String abbrevName(String name) {
-    String[] names = name.split(" ");
-    return (names[0].charAt(0) + "." + names[1].charAt(0)).toUpperCase()
+//   public static String abbrevName(String name) {
+//     String[] names = name.split(" ");
+//     return (names[0].charAt(0) + "." + names[1].charAt(0)).toUpperCase()
+//   }
+// }
+
+// Given the triangle of consecutive odd numbers:
+
+//              1
+//           3     5
+//        7     9    11
+//    13    15    17    19
+// 21    23    25    27    29
+// ...
+// Calculate the row sums of this triangle from the row index (starting at
+// index 1) e.g.:
+
+// rowSumOddNumbers(1); // 1
+// rowSumOddNumbers(2); // 3 + 5 = 8
+
+class RowSumOddNumbers {
+  public static int rowSumOddNumbers(int n) {
+    return n*n*n;
   }
 }
