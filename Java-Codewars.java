@@ -146,20 +146,49 @@
 
 // HackerRank Java Stdin and Stdout II
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class Solution {
+// public class Solution {
 
-  public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    int i = scan.nextInt();
-    double d = scan.nextDouble();
-    scan.nextLine();
-    String s = scan.nextLine();
-    scan.close();
+//   public static void main(String[] args) {
+//     Scanner scan = new Scanner(System.in);
+//     int i = scan.nextInt();
+//     double d = scan.nextDouble();
+//     scan.nextLine();
+//     String s = scan.nextLine();
+//     scan.close();
 
-    System.out.println("String: " + s);
-    System.out.println("Double: " + d);
-    System.out.println("Int: " + i);
-  }
+//     System.out.println("String: " + s);
+//     System.out.println("Double: " + d);
+//     System.out.println("Int: " + i);
+//   }
+// }
+
+// HackerRank Java Loops II Solution:
+
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        for(int i=0;i<t;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+
+            for(int j=0; j<n; j++){
+                a += b;
+
+                if (j>0){
+                    System.out.print(" ");
+                }
+                System.out.print(a);
+                b = b*2;
+            }
+            System.out.println(" ");
+        }
+        in.close();
+    }
 }
