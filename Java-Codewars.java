@@ -241,3 +241,12 @@ public class Printer {
     return count + "/" + length;
   }
 }
+
+// best practice
+
+public class Printer {
+    
+  public static String printerError(String s) {
+      return s.replaceAll("[a-m]", "").length() + "/" + s.length();
+  }
+}
